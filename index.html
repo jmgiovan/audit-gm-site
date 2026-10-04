@@ -5,109 +5,160 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AUDIT-GM | EECC — Conseil et expertise comptable à Cannes</title>
 <meta name="description" content="Cabinet de conseil et d'expertise comptable à Cannes. Quatre personnes, au service des dirigeants de la frontière italienne au milieu du Var.">
+<meta name="theme-color" content="#11202c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2311202c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23e7b25a' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="bandeau">
-  <a class="marque" href="#haut" aria-label="AUDIT-GM, retour en haut">AUDIT-GM<span>EECC</span></a>
-  <nav aria-label="Navigation principale">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<header class="bandeau" id="bandeau">
+  <a class="marque" href="#haut" aria-label="AUDIT-GM, retour en haut">
+    <span class="marque-sigle">GM</span>
+    <span class="marque-nom">AUDIT-GM<small>EECC · Cannes</small></span>
+  </a>
+  <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principale">
+    <span class="menu-trait"></span><span class="sr">Menu</span>
+  </button>
+  <nav id="nav-principale" aria-label="Navigation principale">
     <a href="#conseil">Conseil</a>
-    <a href="#obligations">Comptabilité</a>
     <a href="#territoire">Territoire</a>
+    <a href="#obligations">Comptabilité</a>
     <a href="#cabinet">Cabinet</a>
     <a href="#honoraires">Honoraires</a>
-    <a class="contact-nav" href="#contact">Contact</a>
+    <a class="nav-contact" href="#contact">Nous écrire <span aria-hidden="true">→</span></a>
   </nav>
 </header>
 
 <main id="haut">
 
-<section class="ouverture">
-  <div class="ouverture-grille">
-    <div class="ouverture-corps">
-      <p class="etiquette-h">Conseil et expertise comptable · Cannes</p>
-      <h1>Nous conseillons les dirigeants.<br>Les comptes en sont la base.</h1>
-      <p class="chapeau">Notre mission principale est le conseil : éclairer vos décisions, avant qu'elles ne coûtent. La tenue des comptes et les obligations sont l'outil qui nous permet de le faire avec des chiffres sûrs.</p>
-      <p class="chapeau-2">Quatre personnes, à Cannes. Des clients de la frontière italienne jusqu'au milieu du Var.</p>
+<!-- OUVERTURE -->
+<section class="ouverture" id="contenu">
+  <div class="cadre ouverture-grille">
+    <div class="ouverture-texte">
+      <p class="surtitre"><span class="pastille" aria-hidden="true"></span>Conseil et expertise comptable · Cannes</p>
+      <h1 class="apparition">Nous conseillons les&nbsp;dirigeants. <em>Les comptes en sont la base.</em></h1>
+      <p class="chapeau apparition">Notre mission principale est le conseil : éclairer vos décisions, avant qu'elles ne coûtent. La tenue des comptes et les obligations sont l'outil qui nous permet de le faire avec des chiffres sûrs.</p>
+      <div class="actions apparition">
+        <a class="bouton bouton-plein" href="#contact">Parlons de votre situation</a>
+        <a class="bouton bouton-lien" href="#conseil">Nos missions de conseil <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
-    <figure class="carte-hero">
-        <svg viewBox="0 0 520 300" class="carte-svg" role="img" aria-labelledby="titre-carte desc-carte">
-          <title id="titre-carte">Le littoral entre Menton et le milieu du Var</title>
-          <desc id="desc-carte">Schéma du littoral avec Menton à l'est, puis Nice, Antibes, Cannes, Saint-Raphaël et Fréjus à l'ouest. Cannes est marquée.</desc>
-          <path class="trait" d="M500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246"/>
-          <line class="repere" x1="500" y1="20" x2="500" y2="280"/><text class="legende" x="496" y="276" text-anchor="end">Frontière italienne</text>
-          <line class="repere" x1="24" y1="20" x2="24" y2="280"/><text class="legende" x="30" y="276">Milieu du Var</text>
-          <g class="villes">
-            <circle cx="478" cy="48" r="3"/><text x="482" y="34" text-anchor="end">Menton</text>
-            <circle cx="420" cy="78" r="3"/><text x="414" y="64" text-anchor="end">Nice</text>
-            <circle cx="338" cy="100" r="3"/><text x="338" y="88" text-anchor="middle">Antibes</text>
-            <circle cx="262" cy="151" r="6" class="cannes"/><text x="262" y="180" text-anchor="middle" class="cannes-nom">Cannes</text>
-            <circle cx="150" cy="206" r="3"/><text x="150" y="231" text-anchor="middle">Saint-Raphaël</text>
-            <circle cx="96" cy="213" r="3"/><text x="96" y="196" text-anchor="middle">Fréjus</text>
-          </g>
-        </svg>
-        <figcaption>Notre zone d'intervention. Schéma, pas à l'échelle.</figcaption>
-      </figure>
+
+    <figure class="carte apparition">
+      <div class="carte-entete">
+        <span>Zone d'intervention</span>
+        <span class="carte-coord">43°33′ N · 7°01′ E</span>
+      </div>
+      <svg viewBox="0 0 520 320" role="img" aria-labelledby="titre-carte desc-carte">
+        <title id="titre-carte">Le littoral entre Menton et le milieu du Var</title>
+        <desc id="desc-carte">Schéma du littoral avec Menton à l'est, puis Nice, Antibes, Cannes, Saint-Raphaël et Fréjus à l'ouest. Cannes est marquée.</desc>
+        <defs>
+          <pattern id="mer" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <line x1="0" y1="0" x2="0" y2="10" class="mer-hachure"/>
+          </pattern>
+        </defs>
+        <path class="mer" d="M500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246 L 18 300 L 500 300 Z"/>
+        <path class="trait" pathLength="1" d="M500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246"/>
+        <line class="repere" x1="500" y1="14" x2="500" y2="300"/>
+        <line class="repere" x1="18" y1="14" x2="18" y2="300"/>
+        <text class="legende" x="494" y="292" text-anchor="end">Frontière italienne</text>
+        <text class="legende" x="24" y="292">Milieu du Var</text>
+        <g class="villes">
+          <circle cx="478" cy="48" r="3"/><text x="482" y="34" text-anchor="end">Menton</text>
+          <circle cx="420" cy="78" r="3"/><text x="414" y="64" text-anchor="end">Nice</text>
+          <circle cx="338" cy="100" r="3"/><text x="338" y="88" text-anchor="middle">Antibes</text>
+          <circle cx="150" cy="206" r="3"/><text x="150" y="231" text-anchor="middle">Saint-Raphaël</text>
+          <circle cx="96" cy="213" r="3"/><text x="96" y="196" text-anchor="middle">Fréjus</text>
+          <circle class="onde" cx="262" cy="151" r="6"/>
+          <circle class="cannes" cx="262" cy="151" r="6"/>
+          <text x="262" y="186" text-anchor="middle" class="cannes-nom">Cannes</text>
+        </g>
+      </svg>
+      <figcaption>Schéma, pas à l'échelle.</figcaption>
+    </figure>
   </div>
+
+  <dl class="cadre registre apparition" aria-label="Le cabinet en bref">
+    <div><dt>Équipe</dt><dd><span class="chiffre">4</span> personnes</dd></div>
+    <div><dt>Cabinet</dt><dd>Cannes</dd></div>
+    <div><dt>Territoire</dt><dd>Menton <span aria-hidden="true">→</span><span class="sr"> à </span> Var</dd></div>
+    <div><dt>Réponse</dt><dd>sous <span class="chiffre">48</span> h</dd></div>
+  </dl>
 </section>
 
-<section class="bloc fond-sombre" id="conseil">
-  <div class="grille">
-    <div class="etiquette"><span class="num">01</span>Notre mission</div>
-    <div class="corps">
-      <h2>Le conseil, c'est ce pour quoi<br>on fait appel à nous.</h2>
+<!-- 01 CONSEIL -->
+<section class="bloc sombre" id="conseil">
+  <div class="cadre">
+    <header class="tete apparition">
+      <p class="rubrique"><span class="num">01</span>Notre mission</p>
+      <h2>Le conseil, c'est ce pour quoi <em>on fait appel à nous.</em></h2>
       <p class="intro">Un dirigeant n'a pas besoin qu'on lui rende des chiffres. Il a besoin de savoir quoi en faire. Nous partons de votre situation réelle, nous la chiffrons, et nous vous disons ce que nous ferions à votre place.</p>
+    </header>
 
-      <ol class="liste-conseil">
-        <li><h3>Rémunération et statut du dirigeant</h3><p>Salaire, dividendes, régime social, choix du statut : ce qui reste réellement dans votre poche, et ce que cela coûte à la société.</p></li>
-        <li><h3>Fiscalité</h3><p>Anticiper l'impôt plutôt que le constater. Choisir les options avant la date limite, pas après.</p></li>
-        <li><h3>Création, structuration et réorganisation</h3><p>Société ou entreprise individuelle, holding, séparation du patrimoine professionnel et privé, passage d'un statut à l'autre.</p></li>
-        <li><h3>Financement et trésorerie</h3><p>Préparer un dossier de banque qui tient la route, mesurer la capacité d'endettement, prévoir les creux de trésorerie.</p></li>
-        <li><h3>Pilotage de l'activité</h3><p>Des indicateurs choisis avec vous, lus ensemble : marge, point mort, besoin en fonds de roulement, seuils à ne pas dépasser.</p></li>
-        <li><h3>Transmission et cession</h3><p>Préparer la vente ou la transmission de l'entreprise, évaluer, organiser la sortie du dirigeant.</p></li>
-      </ol>
-    </div>
+    <ol class="missions">
+      <li class="apparition"><h3>Rémunération et statut du dirigeant</h3><p>Salaire, dividendes, régime social, choix du statut : ce qui reste réellement dans votre poche, et ce que cela coûte à la société.</p></li>
+      <li class="apparition"><h3>Fiscalité</h3><p>Anticiper l'impôt plutôt que le constater. Choisir les options avant la date limite, pas après.</p></li>
+      <li class="apparition"><h3>Création, structuration et réorganisation</h3><p>Société ou entreprise individuelle, holding, séparation du patrimoine professionnel et privé, passage d'un statut à l'autre.</p></li>
+      <li class="apparition"><h3>Financement et trésorerie</h3><p>Préparer un dossier de banque qui tient la route, mesurer la capacité d'endettement, prévoir les creux de trésorerie.</p></li>
+      <li class="apparition"><h3>Pilotage de l'activité</h3><p>Des indicateurs choisis avec vous, lus ensemble : marge, point mort, besoin en fonds de roulement, seuils à ne pas dépasser.</p></li>
+      <li class="apparition"><h3>Transmission et cession</h3><p>Préparer la vente ou la transmission de l'entreprise, évaluer, organiser la sortie du dirigeant.</p></li>
+    </ol>
   </div>
 </section>
 
-<section class="bloc fond-gris" id="territoire">
-  <div class="grille">
-    <div class="etiquette"><span class="num">02</span>Territoire</div>
-    <div class="corps deux">
-      <div>
-        <h2>De la frontière italienne<br>au milieu du Var.</h2>
-      </div>
-      <div>
-        <p>Notre cabinet est à Cannes. Nous accompagnons des entreprises de Menton jusqu'au milieu du Var : nous pouvons nous voir, passer chez vous, et nous connaissons le tissu local.</p>
-        <p>Artisans, commerçants, professions libérales, sociétés de services, structures patrimoniales : nous n'avons pas de client type, nous avons une région.</p>
-      </div>
+<!-- 02 TERRITOIRE -->
+<section class="bloc" id="territoire">
+  <div class="cadre deux">
+    <header class="tete apparition">
+      <p class="rubrique"><span class="num">02</span>Territoire</p>
+      <h2>De la frontière italienne <em>au milieu du Var.</em></h2>
+    </header>
+    <div class="texte apparition">
+      <p>Notre cabinet est à Cannes. Nous accompagnons des entreprises de Menton jusqu'au milieu du Var : nous pouvons nous voir, passer chez vous, et nous connaissons le tissu local.</p>
+      <p>Artisans, commerçants, professions libérales, sociétés de services, structures patrimoniales : nous n'avons pas de client type, nous avons une région.</p>
     </div>
+  </div>
+  <div class="cadre">
+    <ol class="itineraire apparition" aria-label="Villes de notre zone, d'est en ouest">
+      <li>Menton</li><li>Nice</li><li>Antibes</li><li class="ici">Cannes</li><li>Saint-Raphaël</li><li>Fréjus</li><li>Var</li>
+    </ol>
   </div>
 </section>
 
-<section class="bloc" id="obligations">
-  <div class="grille">
-    <div class="etiquette"><span class="num">03</span>Comptabilité<br>et obligations</div>
-    <div class="corps">
-      <h2>Des comptes fiables,<br>pour décider sur du solide.</h2>
+<!-- 03 COMPTABILITÉ -->
+<section class="bloc papier" id="obligations">
+  <div class="cadre">
+    <header class="tete apparition">
+      <p class="rubrique"><span class="num">03</span>Comptabilité et obligations</p>
+      <h2>Des comptes fiables, <em>pour décider sur du solide.</em></h2>
       <p class="intro">Nous assurons l'ensemble des obligations de l'entreprise. Elles ne sont pas une fin : elles alimentent le conseil.</p>
-      <dl class="definitions">
-        <div><dt>Comptes annuels</dt><dd>Bilan, compte de résultat, annexe, expliqués avant signature.</dd></div>
-        <div><dt>Déclarations fiscales</dt><dd>TVA, impôt sur les sociétés, liasse fiscale, avec un calendrier suivi.</dd></div>
-        <div><dt>Paie et social</dt><dd>Bulletins, déclarations mensuelles, embauches et départs.</dd></div>
-        <div><dt>Juridique annuel</dt><dd>Assemblée générale d'approbation des comptes, rédigée, signée, archivée, avec l'historique de vos décisions.</dd></div>
+    </header>
+
+    <div class="livre apparition">
+      <div class="livre-entete" aria-hidden="true"><span>Poste</span><span>Ce que nous faisons</span></div>
+      <dl>
+        <div><dt><span class="ref">A</span>Comptes annuels</dt><dd>Bilan, compte de résultat, annexe, expliqués avant signature.</dd></div>
+        <div><dt><span class="ref">B</span>Déclarations fiscales</dt><dd>TVA, impôt sur les sociétés, liasse fiscale, avec un calendrier suivi.</dd></div>
+        <div><dt><span class="ref">C</span>Paie et social</dt><dd>Bulletins, déclarations mensuelles, embauches et départs.</dd></div>
+        <div><dt><span class="ref">D</span>Juridique annuel</dt><dd>Assemblée générale d'approbation des comptes, rédigée, signée, archivée, avec l'historique de vos décisions.</dd></div>
       </dl>
+      <p class="livre-total"><span>Résultat</span><span>Des chiffres sûrs pour le conseil</span></p>
     </div>
   </div>
 </section>
 
+<!-- 04 CABINET -->
 <section class="bloc" id="cabinet">
-  <div class="grille">
-    <div class="etiquette"><span class="num">04</span>Le cabinet</div>
-    <div class="corps">
-      <h2>Quatre personnes.<br>Un choix.</h2>
-      <div class="deux-colonnes-texte">
+  <div class="cadre cabinet">
+    <p class="grand-chiffre apparition" aria-hidden="true">4</p>
+    <div>
+      <header class="tete apparition">
+        <p class="rubrique"><span class="num">04</span>Le cabinet</p>
+        <h2>Quatre personnes. <em>Un choix.</em></h2>
+      </header>
+      <div class="colonnes apparition">
         <p>Nous sommes un cabinet à taille humaine : quatre personnes, un expert-comptable, une équipe qui se parle tous les jours. Quand vous appelez, la personne qui décroche connaît votre dossier, ou sait tout de suite qui le connaît.</p>
         <p>Cela change la manière de conseiller. Pas de dossier qui passe de main en main, pas de question qui attend le retour d'un collègue. Nous préférons suivre moins de dossiers, et les suivre bien.</p>
       </div>
@@ -115,31 +166,32 @@
   </div>
 </section>
 
-<section class="bloc fond-gris" id="honoraires">
-  <div class="grille">
-    <div class="etiquette"><span class="num">05</span>Honoraires</div>
-    <div class="corps deux">
-      <div>
-        <h2>Un prix annoncé<br>avant de commencer.</h2>
-      </div>
-      <div>
-        <p>Chaque mission fait l'objet d'une proposition écrite, que vous lisez avant de vous engager : ce que nous faisons, à quelle fréquence, et ce que cela coûte.</p>
-        <p>Quand le contenu est stable, nous proposons un règlement mensuel fixe, pour que vous sachiez à l'avance ce que vous paierez sur l'année. Si une mission sort du cadre, nous vous prévenons avant de la faire.</p>
-      </div>
-    </div>
+<!-- 05 HONORAIRES -->
+<section class="bloc papier" id="honoraires">
+  <div class="cadre">
+    <header class="tete apparition">
+      <p class="rubrique"><span class="num">05</span>Honoraires</p>
+      <h2>Un prix annoncé <em>avant de commencer.</em></h2>
+    </header>
+    <ol class="etapes">
+      <li class="apparition"><h3>Une proposition écrite</h3><p>Chaque mission fait l'objet d'une proposition écrite, que vous lisez avant de vous engager : ce que nous faisons, à quelle fréquence, et ce que cela coûte.</p></li>
+      <li class="apparition"><h3>Un règlement mensuel fixe</h3><p>Quand le contenu est stable, nous proposons un règlement mensuel fixe, pour que vous sachiez à l'avance ce que vous paierez sur l'année.</p></li>
+      <li class="apparition"><h3>Pas de surprise</h3><p>Si une mission sort du cadre, nous vous prévenons avant de la faire.</p></li>
+    </ol>
   </div>
 </section>
 
-<section class="bloc fond-sombre" id="contact">
-  <div class="grille">
-    <div class="etiquette"><span class="num">06</span>Contact</div>
-    <div class="corps">
-      <h2>Parlons de votre situation.</h2>
+<!-- 06 CONTACT -->
+<section class="bloc sombre contact" id="contact">
+  <div class="cadre">
+    <header class="tete apparition">
+      <p class="rubrique"><span class="num">06</span>Contact</p>
+      <h2 class="contact-titre">Parlons de <em>votre situation.</em></h2>
       <p class="intro">Quelques lignes sur votre activité et sur ce que vous cherchez suffisent. Nous répondons sous 48 heures, par écrit ou par téléphone.</p>
-      <div class="contact-liens">
-        <a href="mailto:jm.giovanni@audit-gm.com">jm.giovanni@audit-gm.com</a>
-        <a href="tel:+33626493050">06 26 49 30 50</a>
-      </div>
+    </header>
+    <div class="contact-liens apparition">
+      <a href="mailto:jm.giovanni@audit-gm.com"><span class="contact-type">Écrire</span><span class="contact-valeur">jm.giovanni@audit-gm.com</span><span class="fleche" aria-hidden="true">↗</span></a>
+      <a href="tel:+33626493050"><span class="contact-type">Appeler</span><span class="contact-valeur">06 26 49 30 50</span><span class="fleche" aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
@@ -147,11 +199,42 @@
 </main>
 
 <footer class="pied">
-  <div class="grille">
-    <p><strong>AUDIT-GM | EECC</strong></p>
+  <div class="cadre pied-grille">
+    <p class="pied-marque">AUDIT-GM <span>| EECC</span></p>
     <p>Conseil et expertise comptable · Cannes</p>
+    <a href="#haut">Haut de page ↑</a>
   </div>
 </footer>
 
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.add('js');
+
+  // menu mobile
+  var bouton=document.querySelector('.menu-bouton');
+  var bandeau=document.getElementById('bandeau');
+  function fermer(){bandeau.classList.remove('ouvert');bouton.setAttribute('aria-expanded','false');}
+  bouton.addEventListener('click',function(){
+    var ouvert=bandeau.classList.toggle('ouvert');
+    bouton.setAttribute('aria-expanded',ouvert?'true':'false');
+  });
+  document.querySelectorAll('#nav-principale a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  // bandeau compact au défilement
+  function surDefilement(){bandeau.classList.toggle('compact',window.scrollY>24);}
+  surDefilement();
+  window.addEventListener('scroll',surDefilement,{passive:true});
+
+  // apparitions
+  var elements=document.querySelectorAll('.apparition');
+  if(!('IntersectionObserver' in window)){elements.forEach(function(el){el.classList.add('vu');});return;}
+  var obs=new IntersectionObserver(function(entrees){
+    entrees.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');obs.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  elements.forEach(function(el){obs.observe(el);});
+})();
+</script>
 </body>
 </html>
