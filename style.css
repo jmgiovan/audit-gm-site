@@ -69,6 +69,21 @@ h1{font-size:clamp(2.2rem,5.6vw,4.6rem);line-height:1.06;font-weight:500;margin-
 .deux-colonnes-texte{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,4rem)}
 .deux-colonnes-texte p{max-width:none}
 
+/* ouverture avec carte */
+.ouverture-grille{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center;max-width:84rem;margin:0 auto}
+.etiquette-h{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--encre-douce);margin:0 0 1.6rem;padding-top:.6rem;border-top:2px solid currentColor;display:inline-block}
+.ouverture h1{font-size:clamp(2.1rem,4.6vw,4rem)}
+.carte-hero{margin:0;background:var(--nuit);padding:1.4rem 1.4rem 1rem;color:#fff}
+.carte-hero svg{width:100%;height:auto;display:block}
+.carte-hero .trait{stroke:var(--laiton-clair);stroke-width:2.6}
+.carte-hero .villes circle{fill:#fff}
+.carte-hero .villes .cannes{fill:var(--laiton-clair)}
+.carte-hero .villes text{fill:rgba(255,255,255,.8);font-size:12px}
+.carte-hero .villes .cannes-nom{fill:#fff;font-size:20px}
+.carte-hero .repere{stroke:rgba(255,255,255,.28);stroke-dasharray:3 4}
+.carte-hero .legende{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;fill:rgba(255,255,255,.55)}
+.carte-hero figcaption{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.5rem}
+
 /* carte */
 .cote-figure{margin:0;background:var(--blanc);border:1px solid var(--filet);padding:1.2rem 1.2rem .8rem}
 .cote-figure svg{width:100%;height:auto;display:block}
@@ -93,6 +108,6 @@ h1{font-size:clamp(2.2rem,5.6vw,4.6rem);line-height:1.06;font-weight:500;margin-
   .bandeau{flex-direction:column;align-items:flex-start;gap:.8rem}
   .bandeau nav{gap:1rem;flex-wrap:wrap;font-size:.85rem}
   .grille{grid-template-columns:1fr;gap:1.2rem}
-  .liste-conseil,.deux-colonnes-texte,.corps.deux{grid-template-columns:1fr}
+  .liste-conseil,.deux-colonnes-texte,.corps.deux,.ouverture-grille{grid-template-columns:1fr}
   .definitions>div{grid-template-columns:1fr;gap:.3rem}
 }
