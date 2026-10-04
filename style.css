@@ -88,22 +88,25 @@ h1 em{display:block;margin-top:.12em}
 .bouton-lien{color:var(--encre);padding:.3rem 0;border-bottom:1px solid var(--encre)}
 .bouton-lien:hover{color:var(--ocre);border-bottom-color:var(--ocre)}
 
-/* carte */
-.carte{margin:0;background:var(--nuit);color:var(--papier);padding:1.1rem 1.3rem 1rem;border-radius:4px;box-shadow:0 30px 60px -30px rgba(17,32,44,.55),0 0 0 1px rgba(17,32,44,.08);position:relative}
-.carte-entete{display:flex;justify-content:space-between;gap:1rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,231,.6);padding-bottom:.8rem;border-bottom:1px solid var(--filet-sombre);margin-bottom:.6rem}
-.carte-coord{font-variant-numeric:tabular-nums;letter-spacing:.08em}
-.carte svg{width:100%;height:auto;display:block;overflow:visible}
+/* carte : terre sombre au nord, mer claire au sud */
+.carte{--mer:#e4ebe9;margin:0;background:var(--mer);color:var(--papier);border-radius:4px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(17,32,44,.55),0 0 0 1px rgba(17,32,44,.08);position:relative}
+.carte-entete{position:absolute;top:0;left:0;right:0;z-index:1;display:flex;justify-content:space-between;gap:1rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,231,.62);padding:1rem 1.3rem .8rem;border-bottom:1px solid var(--filet-sombre)}
+.carte-note{text-transform:none;letter-spacing:.02em;font-style:italic;font-family:var(--serif);font-size:.8rem}
+.carte svg{width:100%;height:auto;display:block}
+.carte .terre{fill:var(--nuit)}
 .carte .mer{fill:url(#mer)}
-.carte .mer-hachure{stroke:rgba(231,178,90,.16);stroke-width:1}
+.carte .mer-hachure{stroke:rgba(17,32,44,.09);stroke-width:1}
 .carte .trait{fill:none;stroke:var(--or);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
-.carte .repere{stroke:rgba(246,241,231,.25);stroke-dasharray:2 5}
-.carte .legende{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;fill:rgba(246,241,231,.5)}
-.carte .villes circle{fill:var(--papier)}
-.carte .villes text{font-family:var(--sans);font-size:12px;fill:rgba(246,241,231,.78)}
-.carte .villes .cannes{fill:var(--or)}
-.carte .villes .onde{fill:none;stroke:var(--or);stroke-width:1.5;transform-origin:262px 151px;transform-box:view-box}
-.carte .villes .cannes-nom{font-family:var(--serif);font-style:italic;font-size:22px;fill:#fff}
-.carte figcaption{font-size:.74rem;color:rgba(246,241,231,.5);margin-top:.4rem}
+.carte .repere{stroke:rgba(140,150,155,.45);stroke-dasharray:2 5}
+.carte .legende{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;fill:rgba(17,32,44,.6)}
+.carte .legende-zone{font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:.04em;fill:rgba(246,241,231,.35)}
+.carte .legende-mer{fill:rgba(17,32,44,.4)}
+.carte .villes circle{fill:var(--papier);stroke:var(--nuit);stroke-width:1.5}
+.carte .villes text{font-family:var(--sans);font-size:12px;fill:rgba(246,241,231,.85)}
+.carte .villes .sur-mer{fill:var(--encre-2)}
+.carte .villes .cannes{fill:var(--ocre-vif);stroke:var(--papier);stroke-width:2}
+.carte .villes .onde{fill:none;stroke:var(--ocre-vif);stroke-width:1.5;transform-origin:262px 151px;transform-box:view-box}
+.carte .villes .cannes-nom{font-family:var(--serif);font-style:italic;font-size:22px;fill:var(--encre)}
 
 /* registre : chiffres-clés, filet double comme sous un total */
 .registre{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(3rem,6vw,5rem);margin-bottom:0}
@@ -176,8 +179,7 @@ h1 em{display:block;margin-top:.12em}
 .contact::before{content:"";position:absolute;right:-18rem;top:-18rem;width:44rem;height:44rem;border-radius:50%;border:1px solid rgba(231,178,90,.18);box-shadow:0 0 0 5rem rgba(231,178,90,.025),0 0 0 10rem rgba(231,178,90,.02);pointer-events:none}
 .contact-titre{font-size:clamp(2.6rem,7vw,6rem);line-height:.98}
 .contact-liens{border-top:1px solid var(--filet-sombre)}
-.contact-liens a{display:grid;grid-template-columns:8rem minmax(0,1fr) auto;align-items:baseline;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--filet-sombre);text-decoration:none;transition:padding .35s var(--ease),color .2s}
-.contact-type{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(246,241,231,.55)}
+.contact-liens a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--filet-sombre);text-decoration:none;transition:padding .35s var(--ease),color .2s}
 .contact-valeur{font-family:var(--serif);font-size:clamp(1.4rem,3.6vw,2.8rem);line-height:1.15;overflow-wrap:anywhere}
 .fleche{font-size:1.6rem;color:var(--or);transition:transform .35s var(--ease)}
 .contact-liens a:hover{padding-left:.8rem;color:var(--or)}
@@ -266,7 +268,5 @@ h1 em{display:block;margin-top:.12em}
   .livre-entete{display:none}
   .livre dl>div,.livre-total{grid-template-columns:1fr;row-gap:.35rem}
   .livre dl>div:first-child{border-top:1px solid var(--encre)}
-  .contact-liens a{grid-template-columns:minmax(0,1fr) auto;row-gap:.2rem}
-  .contact-type{grid-column:1/-1}
   .marque-nom small{display:none}
 }
