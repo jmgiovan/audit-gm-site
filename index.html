@@ -6,8 +6,45 @@
 <title>AUDIT-GM | EECC — Conseil et expertise comptable à Cannes</title>
 <meta name="description" content="Cabinet de conseil et d'expertise comptable à Cannes, à taille humaine, au service des dirigeants de la frontière italienne au milieu du Var.">
 <meta name="theme-color" content="#11202c">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2311202c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23e7b25a' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://www.audit-gm.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="AUDIT-GM | EECC">
+<meta property="og:url" content="https://www.audit-gm.com/">
+<meta property="og:title" content="AUDIT-GM | EECC — Expert-comptable et conseil à Cannes">
+<meta property="og:description" content="Nous conseillons les dirigeants. Les comptes en sont la base. Cabinet à taille humaine, de la frontière italienne au milieu du Var.">
+<meta property="og:image" content="https://www.audit-gm.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AUDIT-GM | EECC, conseil et expertise comptable à Cannes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/Newsreader-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Newsreader-italic-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/InstrumentSans-normal-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "AUDIT-GM | EECC",
+  "description": "Cabinet de conseil et d'expertise comptable à Cannes, au service des dirigeants de la frontière italienne au milieu du Var.",
+  "url": "https://www.audit-gm.com/",
+  "image": "https://www.audit-gm.com/og.png",
+  "logo": "https://www.audit-gm.com/apple-touch-icon.png",
+  "email": "contact@audit-gm.com",
+  "telephone": "+33626493050",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cannes",
+    "addressRegion": "Provence-Alpes-Côte d'Azur",
+    "addressCountry": "FR"
+  },
+  "areaServed": ["Menton", "Nice", "Antibes", "Cannes", "Saint-Raphaël", "Fréjus", "Var", "Alpes-Maritimes"],
+  "knowsLanguage": "fr"
+}
+</script>
 </head>
 <body>
 
@@ -37,7 +74,7 @@
 <section class="ouverture" id="contenu">
   <div class="cadre ouverture-grille">
     <div class="ouverture-texte">
-      <p class="surtitre"><span class="pastille" aria-hidden="true"></span>Conseil et expertise comptable · Cannes</p>
+      <p class="surtitre"><span class="pastille" aria-hidden="true"></span>Expert-comptable et conseil · Cannes</p>
       <h1 class="apparition">Nous conseillons les&nbsp;dirigeants. <em>Les comptes en sont la base.</em></h1>
       <p class="chapeau apparition">Notre mission principale est le conseil : éclairer vos décisions, avant qu'elles ne coûtent. La tenue des comptes et les obligations sont l'outil qui nous permet de le faire avec des chiffres sûrs.</p>
       <div class="actions apparition">
@@ -191,7 +228,7 @@
       <p class="intro">Quelques lignes sur votre activité et sur ce que vous cherchez suffisent. Nous répondons sous 48 heures, par écrit ou par téléphone.</p>
     </header>
     <div class="contact-liens apparition">
-      <a href="mailto:contact@audit-gm.com?cc=jm.giovanni@audit-gm.com"><span class="contact-valeur">contact@audit-gm.com</span><span class="fleche" aria-hidden="true">↗</span></a>
+      <a href="mailto:contact@audit-gm.com" data-copie="jm.giovanni|audit-gm.com"><span class="contact-valeur">contact@audit-gm.com</span><span class="fleche" aria-hidden="true">↗</span></a>
       <a href="tel:+33626493050"><span class="contact-valeur">06 26 49 30 50</span><span class="fleche" aria-hidden="true">↗</span></a>
     </div>
   </div>
@@ -203,7 +240,7 @@
   <div class="cadre pied-grille">
     <p class="pied-marque">AUDIT-GM <span>| EECC</span></p>
     <p>Conseil et expertise comptable · Cannes</p>
-    <a href="#haut">Haut de page ↑</a>
+    <p class="pied-liens"><a href="confidentialite.html">Confidentialité</a><a href="#haut">Haut de page ↑</a></p>
   </div>
 </footer>
 
@@ -211,6 +248,12 @@
 (function(){
   var doc=document.documentElement;
   doc.classList.add('js');
+
+  // copie de l'e-mail (assemblée ici pour ne pas exposer l'adresse aux robots)
+  document.querySelectorAll('a[data-copie]').forEach(function(a){
+    var p=a.getAttribute('data-copie').split('|');
+    a.href+='?cc='+p[0]+'@'+p[1];
+  });
 
   // menu mobile
   var bouton=document.querySelector('.menu-bouton');

@@ -1,4 +1,11 @@
-@import url('fonts-local.css');
+/* polices locales (WOFF2, sous-ensemble latin) */
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/InstrumentSans-normal-400.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/InstrumentSans-normal-500.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/InstrumentSans-normal-600.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/Newsreader-normal-400.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/Newsreader-normal-500.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:300;font-display:swap;src:url('fonts/Newsreader-italic-300.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/Newsreader-italic-400.woff2') format('woff2')}
 
 /* ------------------------------------------------------------------
    AUDIT-GM | EECC
@@ -191,8 +198,17 @@ h1 em{display:block;margin-top:.12em}
 .pied p{margin:0;max-width:none}
 .pied-marque{color:var(--papier);font-weight:600;letter-spacing:.2em}
 .pied-marque span{color:var(--or);font-weight:400}
-.pied a{text-decoration:none;color:rgba(246,241,231,.75)}
+.pied a{text-decoration:none;color:rgba(246,241,231,.75);display:inline-block;padding:.45rem 0}
+.pied-liens{display:flex;flex-wrap:wrap;gap:0 1.6rem}
 .pied a:hover{color:var(--or)}
+
+/* pages simples (confidentialité, 404) */
+.page-simple{min-height:100vh;display:flex;flex-direction:column}
+.page-simple main{flex:1}
+.texte-long{max-width:48rem}
+.texte-long h1{font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.02;margin-bottom:1.6rem}
+.texte-long h2{font-size:1.5rem;line-height:1.25;margin:2.6rem 0 .8rem;letter-spacing:-.01em}
+.texte-long a:not(.bouton){color:var(--ocre)}
 
 /* ------------------------------------------------------------------ animations */
 .js .apparition{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
