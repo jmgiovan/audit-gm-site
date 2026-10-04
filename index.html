@@ -49,34 +49,36 @@
     <figure class="carte apparition">
       <div class="carte-entete">
         <span>Zone d'intervention</span>
-        <span class="carte-coord">43°33′ N · 7°01′ E</span>
+        <span class="carte-note">Schéma, pas à l'échelle</span>
       </div>
-      <svg viewBox="0 0 520 320" role="img" aria-labelledby="titre-carte desc-carte">
+      <svg viewBox="0 -64 520 384" role="img" aria-labelledby="titre-carte desc-carte">
         <title id="titre-carte">Le littoral entre Menton et le milieu du Var</title>
-        <desc id="desc-carte">Schéma du littoral avec Menton à l'est, puis Nice, Antibes, Cannes, Saint-Raphaël et Fréjus à l'ouest. Cannes est marquée.</desc>
+        <desc id="desc-carte">Schéma du littoral : la terre en sombre au nord, la mer en clair au sud. Menton à l'est, puis Nice, Antibes, Cannes, Saint-Raphaël et Fréjus à l'ouest. Cannes est marquée.</desc>
         <defs>
-          <pattern id="mer" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
-            <line x1="0" y1="0" x2="0" y2="10" class="mer-hachure"/>
+          <pattern id="mer" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <line x1="0" y1="0" x2="0" y2="9" class="mer-hachure"/>
           </pattern>
         </defs>
-        <path class="mer" d="M500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246 L 18 300 L 500 300 Z"/>
-        <path class="trait" pathLength="1" d="M500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246"/>
-        <line class="repere" x1="500" y1="14" x2="500" y2="300"/>
-        <line class="repere" x1="18" y1="14" x2="18" y2="300"/>
-        <text class="legende" x="494" y="292" text-anchor="end">Frontière italienne</text>
-        <text class="legende" x="24" y="292">Milieu du Var</text>
+        <path class="mer" d="M520 32 L500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246 L0 252 L0 320 L520 320 Z"/>
+        <path class="terre" d="M0 -64 L520 -64 L520 32 L500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246 L0 252 Z"/>
+        <path class="trait" pathLength="1" d="M520 32 L500 40 C 470 52, 452 62, 430 74 C 410 85, 398 96, 378 100 C 352 106, 338 96, 318 108 C 298 120, 290 140, 266 150 C 244 159, 226 148, 204 160 C 182 172, 176 196, 150 206 C 124 216, 104 204, 78 214 C 58 222, 40 240, 18 246 L0 252"/>
+        <line class="repere" x1="500" y1="-64" x2="500" y2="320"/>
+        <line class="repere" x1="18" y1="-64" x2="18" y2="320"/>
+        <text class="legende" x="494" y="306" text-anchor="end">Frontière italienne</text>
+        <text class="legende" x="24" y="306">Milieu du Var</text>
+        <text class="legende-zone" x="210" y="40" text-anchor="middle">Terre</text>
+        <text class="legende-zone legende-mer" x="400" y="230" text-anchor="middle">Mer Méditerranée</text>
         <g class="villes">
-          <circle cx="478" cy="48" r="3"/><text x="482" y="34" text-anchor="end">Menton</text>
-          <circle cx="420" cy="78" r="3"/><text x="414" y="64" text-anchor="end">Nice</text>
-          <circle cx="338" cy="100" r="3"/><text x="338" y="88" text-anchor="middle">Antibes</text>
-          <circle cx="150" cy="206" r="3"/><text x="150" y="231" text-anchor="middle">Saint-Raphaël</text>
-          <circle cx="96" cy="213" r="3"/><text x="96" y="196" text-anchor="middle">Fréjus</text>
+          <circle cx="478" cy="48" r="3.5"/><text x="482" y="30" text-anchor="end">Menton</text>
+          <circle cx="420" cy="78" r="3.5"/><text x="414" y="62" text-anchor="end">Nice</text>
+          <circle cx="338" cy="100" r="3.5"/><text x="338" y="86" text-anchor="middle">Antibes</text>
+          <circle cx="150" cy="206" r="3.5"/><text class="sur-mer" x="150" y="233" text-anchor="middle">Saint-Raphaël</text>
+          <circle cx="96" cy="213" r="3.5"/><text x="96" y="194" text-anchor="middle">Fréjus</text>
           <circle class="onde" cx="262" cy="151" r="6"/>
-          <circle class="cannes" cx="262" cy="151" r="6"/>
-          <text x="262" y="186" text-anchor="middle" class="cannes-nom">Cannes</text>
+          <circle class="cannes" cx="262" cy="151" r="6.5"/>
+          <text x="262" y="188" text-anchor="middle" class="cannes-nom">Cannes</text>
         </g>
       </svg>
-      <figcaption>Schéma, pas à l'échelle.</figcaption>
     </figure>
   </div>
 
@@ -189,8 +191,8 @@
       <p class="intro">Quelques lignes sur votre activité et sur ce que vous cherchez suffisent. Nous répondons sous 48 heures, par écrit ou par téléphone.</p>
     </header>
     <div class="contact-liens apparition">
-      <a href="mailto:contact@audit-gm.com?cc=jm.giovanni@audit-gm.com"><span class="contact-type">Écrire</span><span class="contact-valeur">contact@audit-gm.com</span><span class="fleche" aria-hidden="true">↗</span></a>
-      <a href="tel:+33626493050"><span class="contact-type">Appeler</span><span class="contact-valeur">06 26 49 30 50</span><span class="fleche" aria-hidden="true">↗</span></a>
+      <a href="mailto:contact@audit-gm.com?cc=jm.giovanni@audit-gm.com"><span class="contact-valeur">contact@audit-gm.com</span><span class="fleche" aria-hidden="true">↗</span></a>
+      <a href="tel:+33626493050"><span class="contact-valeur">06 26 49 30 50</span><span class="fleche" aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
